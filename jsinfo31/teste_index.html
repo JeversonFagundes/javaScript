@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+
+    <p onmouseenter="mudarCor()" onmouseleave="tirarCor()" id="texto">Meu texto</p>
+
+    <button onclick="mudarTexto()">Mudar texto</button>
+
+    <script>
+
+        console.log("olá mundo!");
+
+        function mudarTexto() {
+            document.getElementById("texto").innerHTML = 'Segundo Texto';
+
+            let a = document.createElement("a");
+
+            a.setAttribute("href", "www.google.com");
+
+            a.innerHTML = "<br><br>" + "GOOGLE";
+
+            document.getElementById("texto").appendChild(a);
+        }
+
+        function mudarCor() {
+
+            document.getElementById("texto").style.backgroundColor = "greenyellow";
+        }
+        function tirarCor() {
+            document.getElementById("texto").style.backgroundColor = "";
+        }
+    </script>
+</body>
+
+</html>

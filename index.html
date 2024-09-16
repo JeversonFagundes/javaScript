@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud em JavaScript</title>
+
+</head>
+
+<body>
+
+    <h1>Cadastrar usuários</h1>
+
+    <form onsubmit="return salvarUsuario(event);">
+        <label for="id">Informe o id:</label>
+        <input type="number" name="id" id="id"><br><br>
+
+        <label for="nome">Informe o nome:</label>
+        <input type="text" name="nome" id="nome"><br><br>
+
+        <label for="email">Informe o email:</label>
+        <input type="email" name="email" id="email"><br><br>
+
+        <label for="senha">Informe a senha:</label>
+        <input type="password" name="senha" id="senha"><br><br>
+
+        <input type="submit" value="Registrar o usuário">
+    </form>
+
+    <script src="crud.js"></script>
+</body>
+
+</html>
