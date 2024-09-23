@@ -15,7 +15,7 @@
 
     <form onsubmit="return salvarUsuario(event);">
         <label for="id">Informe o id:</label>
-        <input type="number" name="id" id="id"><br><br>
+        <input type="number" name="id_usuario" id="id_usuario"><br><br>
 
         <label for="nome">Informe o nome:</label>
         <input type="text" name="nome" id="nome"><br><br>
@@ -28,6 +28,29 @@
 
         <input type="submit" value="Registrar o usuário">
     </form>
+
+    <br><br>
+
+    <button onclick="inserirUsuario();">Adicionar</button>
+
+    <br><br>
+
+    <table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th colspan="2">Opções</th>
+                </tr>
+            </thead>
+
+            <tbody id="usuarios">
+            </tbody>
+        </table>
+    </table>
 
     <script src="crud.js"></script>
 </body>
