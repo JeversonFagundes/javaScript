@@ -1,16 +1,9 @@
 <?php
 
-require_once "conecta.php";
+require_once "conexao.php";
+$conexao = conectar();
 
-$mysql = conectar();
-
-$sql = "SELECT * FROM usuarios";
-
-$resultado = excutarSQL($mysql, $sql);
-
+$sql = "SELECT * FROM usuario";
+$resultado = executarSQL($conexao, $sql);
 $usuarios = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
-
 echo json_encode($usuarios);
-
-
-
